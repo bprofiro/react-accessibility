@@ -1,24 +1,14 @@
-import { createContext, PropsWithChildren, useEffect, useState } from 'react';
+import { createContext, PropsWithChildren, useState } from 'react';
 
-import { AxiosResponse } from 'axios';
-
-import { api } from '../services/api';
+import { TRANSACTIONS } from '@constants';
 
 type TransactionProps = {
-  id?: number;
+  id: number;
   title: string;
   type: string;
   category: string;
   amount: number;
-  createdAt?: string | Date;
-};
-
-type ResponseGetTransactions = {
-  transactions: TransactionProps[];
-};
-
-type ResponsePostTransactions = {
-  transaction: TransactionProps;
+  createdAt: string | Date;
 };
 
 type TransactionInput = Omit<TransactionProps, 'id' | 'createdAt'>;
@@ -33,27 +23,17 @@ export const TransactionsContext = createContext<TransactionsContextData>(
 );
 
 export function TransactionsProvider({ children }: PropsWithChildren<unknown>) {
-  const [transactions, setTransactions] = useState<TransactionProps[]>([]);
-
-  useEffect(() => {
-    async function getTransations() {
-      const response = await api.get<ResponseGetTransactions>('transactions');
-
-      setTransactions(response.data.transactions);
-    }
-    getTransations();
-  }, []);
+  const [transactions, setTransactions] =
+    useState<TransactionProps[]>(TRANSACTIONS);
 
   async function createTransaction(transaction: TransactionInput) {
-    const response: AxiosResponse<ResponsePostTransactions> = await api.post(
-      '/transactions',
-      {
-        ...transaction,
-        createdAt: new Date(),
-      },
-    );
+    const newTransaction = {
+      ...transaction,
+      createdAt: new Date(),
+      id: transactions.length + 1,
+    };
 
-    setTransactions([...transactions, response.data.transaction]);
+    setTransactions([...transactions, newTransaction]);
   }
 
   return (

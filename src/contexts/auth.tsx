@@ -1,12 +1,11 @@
 import { createContext, PropsWithChildren, useCallback, useState } from 'react';
 
-import { AxiosResponse } from 'axios';
 import { storageKey } from '@utils';
-import { api } from '@services/api';
+import { v4 as uuidv4 } from 'uuid';
 
 interface UserProps {
   id: string;
-  email: string;
+  name: string;
 }
 
 interface AuthState {
@@ -27,34 +26,23 @@ export const AuthContext = createContext<AuthContextData>(
 export function AuthProvider({ children }: PropsWithChildren<unknown>) {
   const [data, setData] = useState<AuthState>(() => {
     const token = localStorage.getItem(storageKey('token'));
-    const user = localStorage.getItem(storageKey('user'));
+    const storedUser = localStorage.getItem(storageKey('user'));
 
-    if (token && user) {
-      if (api.defaults.headers) {
-        api.defaults.headers.authorization = `Bearer ${token}`;
-      }
-
-      return { token, user: JSON.parse(user) };
+    if (token && storedUser) {
+      return { token, user: JSON.parse(storedUser) };
     }
 
     return {} as AuthState;
   });
 
   const signIn = useCallback(async (name: string) => {
-    const response: AxiosResponse<AuthState> = await api.post('/sessions', {
-      name,
-    });
-
-    const { token, user } = response.data;
+    const token = uuidv4();
+    const user = { id: uuidv4(), name };
 
     localStorage.setItem(storageKey('token'), token);
     localStorage.setItem(storageKey('user'), JSON.stringify(user));
 
-    if (api.defaults.headers) {
-      api.defaults.headers.authorization = `Bearer ${token}`;
-    }
-
-    setData({ token, user });
+    setData({ token: uuidv4(), user });
   }, []);
 
   const signOut = useCallback(() => {
