@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+<h1 align="center">
+  React Accessibility
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+  📚 React finance application created following web accessibility principles.
+</h3>
 
-## Available Scripts
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/bprofiro/react-accessibility?color=%2304D361">
 
-In the project directory, you can run:
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/bprofiro/react-accessibility">
 
-### `yarn start`
+  <a href="https://github.com/bprofiro/react-accessibility/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/bprofiro/react-accessibility">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/bprofiro/react-accessibility/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/bprofiro/react-accessibility?style=social">
+  </a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <a href="https://github.com/bprofiro/">
+    <img alt="Feito pela Brenda" src="https://img.shields.io/badge/feito%20pela-Brenda-%237519C1">
+  </a>
+</p>
 
-### `yarn test`
+![image](https://user-images.githubusercontent.com/59852846/137407496-b2e932ae-b742-4fad-a8c6-52f90909f758.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <a href="https://react-accessibility.netlify.app/" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
+  </a>
+</p>
 
-### `yarn build`
+<h4 align="center">
+	Concluído 🚀
+</h4>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tabela de conteúdos
+=================
+<!--ts-->
+- [Tabela de conteúdos](#tabela-de-conteúdos)
+  - [💻 About](#-about)
+  - [🛠 Tecnologias](#-tecnologias)
+      - [**Web**](#web)
+  - [💪 Como contribuir no projeto](#-como-contribuir-no-projeto)
+  - [🦸 Autor](#-autor)
+  - [📝 Licença](#-licença)
+<!--te-->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💻 About
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React Accessibility - This project was created with the intention of studying the concepts of accessibility within React, with the basic functionalities expected by an accessible project: keyboard navigation, color contrast, easy reading by screen readers, good semantics.
 
-### `yarn eject`
+---
+## 🛠 Tecnologias
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+As seguintes ferramentas foram usadas na construção do projeto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### **Web**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   **[React](https://pt-br.reactjs.org/)**
+-   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[React Router Dom](https://reactrouter.com/web/guides/quick-start)**
+-   **[Styled-components](https://styled-components.com/)**
+-   **[Framer Motion](https://www.framer.com/motion/)**
+-   **[Reakit](https://reakit.io/**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 💪 Como contribuir no projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](./CONTRIBUTING.md)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## 🦸 Autor
+<p align="center">
+  <a href="https://github.com/bprofiro">
+  <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/59852846?s=460&u=7eefe48768a2c3f95271868f85d8e61f9ffbebad&v=4" width="100px;" alt=""/>
+  <br />
+  <sub><b>Brenda Profiro</b></sub></a> <a href="https://blog-bprofiro.vercel.app/" title="Blog Pessoal">🚀</a>
+  <br />
+</p>
+
+---
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Brenda Profiro 👋🏽 [Entre em contato!](https://www.linkedin.com/in/brenda-profiro/)
+
+---
