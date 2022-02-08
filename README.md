@@ -65,7 +65,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[React Router Dom](https://reactrouter.com/web/guides/quick-start)**
 -   **[Styled-components](https://styled-components.com/)**
 -   **[Framer Motion](https://www.framer.com/motion/)**
--   **[Reakit](https://reakit.io/**
+-   **[Reakit](https://reakit.io/)**
 
 ---
 
